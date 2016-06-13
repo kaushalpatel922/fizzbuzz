@@ -3,7 +3,7 @@ console.log('loaded...');
 // Declare variables
 var current_number = Math.floor(Math.random() * 300);
 var count = 10;
-var misses = 0;
+var incorrect = 0;
 var clock;
 var current_time;
 
@@ -21,3 +21,21 @@ function checkCurrentNumber() {
     return current_number;
   }
 }
+
+// Updating status for Current number, wrong answers and counts left.
+function updateStats() {
+  $('.current_number').text(current_number);
+  $('.stat-incorrect').text("Incorrect: " + incorrect);
+  $('.stat-count').text("Turns left: " + count);
+}
+
+// At the end, update the result to show the data to the user.
+function updateEndCard() {
+  $('h3:nth-child(2)').text("Incorrect: " + incorrect);
+  $('h3:nth-child(3)').text("Accuracy: " + (10-miss)));
+}
+
+//When a user clicks the start button on the form execute this.
+$('.start_form').on('submit', function(e) {
+
+})
