@@ -10,11 +10,9 @@
 
 $(document).ready(function() {
   // Declare variables
-  var current_number = Math.floor(Math.random() * 300);
+  var current_number = generateRandomNumber(1,300);
   var count = 10;
   var incorrect = 0;
-  var clock;
-  var current_time;
 
   //Define a function that checks for the possibilities
   function checkCurrentNumber() {
@@ -57,17 +55,21 @@ $(document).ready(function() {
   // When a user submits the answer on the input field
   $('.input_form').on('submit', function(e) {
     e.preventDefault();
+
     var input = $('.text').val().toLowerCase().trim(),
         test = checkCurrentNumber();
 
     $('.text').val('');
 
+
     if (test == input) {
       count -- ;
+
       if(count == 0) {
         updateEndCard();
         $('.end').show();
       } else {
+        current_number = generateRandomNumber(1,300);
         updateStats();
       }
     } else {
@@ -79,4 +81,8 @@ $(document).ready(function() {
 
   $('.body').disableSelection();
 
-})
+});
+
+function generateRandomNumber(min, max) {
+  return Math.floor(Math.random() * max);
+}
