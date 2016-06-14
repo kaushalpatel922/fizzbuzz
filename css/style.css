@@ -11,7 +11,7 @@ body {
 }
 
 .modal {
-  /*position: absolute;*/
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -26,7 +26,13 @@ body {
   padding-top: 10%;
   color: midnightblue;
 }
-
+.current_number{
+  font-size: 4em;
+  padding: 20px 0;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+  background-color: grey;
+}
 h1 {
   font-size: 3.5rem;
   letter-spacing: 0.5rem;
@@ -43,14 +49,42 @@ h1 {
   color: white;
 }
 a {
-  /*display: block;*/
   text-decoration: none;
   margin: 10px;
-  color: black;
-  border-bottom: 3px solid white;
+  padding: 5px 15px 5px 15px;
+  border: 2px solid white;
+  background: cornflowerblue;
+  color: white;
+}
+a:hover {
+  border: none;
+  background: white;
+  color: cornflowerblue;
 }
 .end {
-  /*display: none;*/
+  display: none;
+  padding-top: 8px;
+}
+input {
+  vertical-align: bottom;
+}
+.input_form{
+  margin: 20px;
+}
+.enter {
+  font-size: 1rem;
+  padding: 3px 3px;
+}
+.text {
+  border: none;
+  font-size: 1.2em;
+  margin: 5px 5px 0 0;
+  padding: 5px 0px 5px 5px;
+  background-color: transparent;
+  border-bottom: 3px solid white;
+  text-align: center;
+  color: white;
+  width: 20%;
 }
 #container {
   padding-top: 30px;
@@ -58,7 +92,7 @@ a {
 #stat_container {
   padding: 20px 0 25px 0;
 }
-.stat {
+#stats {
   display: inline-block;
   margin: 0 10px;
 }

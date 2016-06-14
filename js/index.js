@@ -7,12 +7,13 @@
                  .on('selectstart', false);
     };
 })(jQuery);
-
 $(document).ready(function() {
   // Declare variables
   var current_number = generateRandomNumber(1,300);
   var count = 10;
   var incorrect = 0;
+  $('#container').hide();
+
 
   //Define a function that checks for the possibilities
   function checkCurrentNumber() {
@@ -45,6 +46,8 @@ $(document).ready(function() {
   //When a user clicks the start button on the form execute this.
   $('.start_form').on('submit', function(e) {
     e.preventDefault();
+    $('.end').show();
+    $('#container').show();
     // hide the main display page
     $('.title_card').hide();
     //display the next page with input field.
@@ -60,7 +63,6 @@ $(document).ready(function() {
         test = checkCurrentNumber();
 
     $('.text').val('');
-
 
     if (test == input) {
       count -- ;
