@@ -10,6 +10,29 @@ body {
   font-family: sans-serif;
 }
 
+.modal {
+  /*position: absolute;*/
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /*background-color: black;*/
+}
+
+.inner_modal {
+  width: 600px;
+  margin: auto;
+  position: relative;
+  padding-top: 10%;
+  color: midnightblue;
+}
+
+h1 {
+  font-size: 3.5rem;
+  letter-spacing: 0.5rem;
+}
+
+
 footer {
   /*position: absolute;*/
   bottom: 0;
