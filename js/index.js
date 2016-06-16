@@ -1,12 +1,11 @@
+$(document).ready(function(){
+  $("body").css("-webkit-user-select","none");
+  $("body").css("-moz-user-select","none");
+  $("body").css("-ms-user-select","none");
+  $("body").css("-o-user-select","none");
+  $("body").css("user-select","none");
+});
 
-(function($){
-    $.fn.disableSelection = function() {
-        return this
-                 .attr('unselectable', 'on')
-                 .css('user-select', 'none')
-                 .on('selectstart', false);
-    };
-})(jQuery);
 $(document).ready(function() {
   // Declare variables
   var current_number = generateRandomNumber(1,300);
@@ -46,12 +45,13 @@ $(document).ready(function() {
   //When a user clicks the start button on the form execute this.
   $('.start_form').on('submit', function(e) {
     e.preventDefault();
-    $('.end').show();
+
     $('#container').show();
     // hide the main display page
     $('.title_card').hide();
     //display the next page with input field.
     $('.text').focus();
+    $('.end').show();
     updateStats();
   })
 
